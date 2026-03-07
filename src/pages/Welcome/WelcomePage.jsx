@@ -14,7 +14,7 @@ alignItems="center"
 height="100vh"
 >
 <Typography variant="h3" gutterBottom>
-Bienvenido al IoT Dashboard
+Bienvenido a nuestro sitio web
 </Typography>
 
 <Button
