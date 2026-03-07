@@ -25,14 +25,14 @@ export default function Sidebar({open, onClose, isMobile}){
             <Toolbar />
             <List>
                 <ListItemButton
-                    component = {Link}
-                    to = "/"
-                    selected = {location.pathname === "/"}
+                     component = {Link}
+                     to = "/dashboard"
+                     selected = {location.pathname === "/dashboard"}
                     onClick={handleClick}
-                >
-                    <ListItemIcon><DashboardIcon /></ListItemIcon>
-                    <ListItemText primary="Dashboard"></ListItemText>
-                </ListItemButton>
+>
+                     <ListItemIcon><DashboardIcon /></ListItemIcon>
+                     <ListItemText primary="Dashboard"></ListItemText>
+                     </ListItemButton>
 
                 <ListItemButton
                     component = {Link}
