@@ -9,8 +9,9 @@ import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
-export default function MainLayout({children}){
+export default function MainLayout(){
     const them = useTheme();
     const isMobile = useMediaQuery(them.breakpoints.down("md"));
     const [open, setOpen] = useState(false);
@@ -34,9 +35,8 @@ export default function MainLayout({children}){
                     p: 3
                 }}
             >
-                {}
                 <Toolbar />
-                {children}  
+                <Outlet />
             </Box>
         </Box>
     );
