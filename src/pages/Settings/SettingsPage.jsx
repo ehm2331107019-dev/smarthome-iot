@@ -1,12 +1,19 @@
+import { Card, CardContent, TextField, Button } from "@mui/material";
 import PageContainer from "../../components/common/PageContainer";
 
-const SettingsPage = () => {
+export default function SettingsPage() {
   return (
     <PageContainer title="Settings">
-      <h2>Settings Module</h2>
-      <p>Aquí se mostrarán las configuraciones del sistema.</p>
+      <Card sx={{ maxWidth: 500 }}>
+        <CardContent>
+          <TextField label="Device ID" fullWidth margin="normal" />
+          <TextField label="API Key" fullWidth margin="normal" />
+
+          <Button variant="contained" fullWidth>
+            Save Settings
+          </Button>
+        </CardContent>
+      </Card>
     </PageContainer>
   );
-};
-
-export default SettingsPage;
+}
