@@ -26,8 +26,8 @@ export default function Sidebar({open, onClose, isMobile}){
             <List>
                 <ListItemButton
                     component = {Link}
-                    to = "/"
-                    selected = {location.pathname === "/dashboard"}
+                    to="/dashboard"
+                    selected = {location.pathname === "/"}
                     onClick={handleClick}
                 >
                     <ListItemIcon><DashboardIcon /></ListItemIcon>
