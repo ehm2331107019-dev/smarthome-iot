@@ -11,16 +11,12 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Página de bienvenida */}
         <Route path="/" element={<WelcomePage />} />
 
-        {/* Rutas con Layout */}
         <Route element={<MainLayout />}>
-
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/devices" element={<DevicesPage />} />
           <Route path="/settings" element={<SettingsPage />} />
-
         </Route>
 
       </Routes>

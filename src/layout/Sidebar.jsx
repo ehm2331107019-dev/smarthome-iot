@@ -7,80 +7,71 @@ import {
     Toolbar
 } from "@mui/material"
 
-import DashboardIcon from "@mui/icons-material/Dashboard"
-import DevicesIcon from "@mui/icons-material/Devices"
-import SettingsIcon from "@mui/icons-material/Settings"
+import DashboardIcon  from "@mui/icons-material/Dashboard"
+import DevicesIcon  from "@mui/icons-material/Devices"
+import SettingsIcon  from "@mui/icons-material/Settings"
 
-import { Link, useLocation } from "react-router-dom"
-import { drawerWidth } from "./constants"
+import {Link, useLocation} from "react-router-dom"
+import {drawerWidth} from "./constants"
 
-export default function Sidebar({ open, onClose, isMobile }) {
-
+export default function Sidebar({open, onClose, isMobile}){
     const location = useLocation();
-
-    const handleClick = () => {
+    const handleClick = () =>{
         if (isMobile) onClose();
     };
-
     const drawerContent = (
         <>
+            {}
             <Toolbar />
-
             <List>
 
-                {/* DASHBOARD */}
+                {/* Dashboard */}
                 <ListItemButton
-                    component={Link}
-                    to="/dashboard"
-                    selected={location.pathname === "/dashboard"}
+                    component = {Link}
+                    to = "/dashboard"
+                    selected = {location.pathname === "/dashboard"}
                     onClick={handleClick}
                 >
-                    <ListItemIcon>
-                        <DashboardIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard" />
+                    <ListItemIcon><DashboardIcon /></ListItemIcon>
+                    <ListItemText primary="Dashboard"></ListItemText>
                 </ListItemButton>
 
-                {/* DEVICES */}
+                {/* Devices */}
                 <ListItemButton
-                    component={Link}
-                    to="/devices"
-                    selected={location.pathname === "/devices"}
+                    component = {Link}
+                    to = "/devices"
+                    selected = {location.pathname === "/devices"}
                     onClick={handleClick}
                 >
-                    <ListItemIcon>
-                        <DevicesIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Devices" />
+                    <ListItemIcon><DevicesIcon /></ListItemIcon>
+                    <ListItemText primary="Devices"></ListItemText>
                 </ListItemButton>
 
-                {/* SETTINGS */}
+                {/* Settings */}
                 <ListItemButton
-                    component={Link}
-                    to="/settings"
-                    selected={location.pathname === "/settings"}
+                    component = {Link}
+                    to = "/settings"
+                    selected = {location.pathname === "/settings"}
                     onClick={handleClick}
                 >
-                    <ListItemIcon>
-                        <SettingsIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Settings" />
+                    <ListItemIcon><SettingsIcon /></ListItemIcon>
+                    <ListItemText primary="Settings"></ListItemText>
                 </ListItemButton>
 
             </List>
         </>
     );
-
-    return (
-        <Drawer
+    
+    return(
+        <Drawer 
             variant={isMobile ? "temporary" : "permanent"}
-            open={open}
-            onClose={onClose}
-            ModalProps={{ keepMounted: true }}
+            open = {open}
+            onClose= {onClose}
+            ModalProps= {{keepMounted: true}}
             sx={{
                 width: drawerWidth,
                 flexShrink: 0,
-                "& .MuiDrawer-paper": {
+                "& .MuiDrawer-paper":{
                     width: drawerWidth,
                     boxSizing: "border-box"
                 }
