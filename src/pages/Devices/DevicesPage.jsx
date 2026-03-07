@@ -1,5 +1,5 @@
 import { Grid, Card, CardContent, Typography } from "@mui/material";
-import PageContainer from "../components/common/PageContainer";
+import PageContainer from "../../components/common/PageContainer";
 
 export default function DevicesPage() {
   return (

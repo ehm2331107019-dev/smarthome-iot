@@ -4,7 +4,6 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import DevicesPage from "./pages/Devices/DevicesPage";
 import SettingsPage from "./pages/Settings/SettingsPage";
 
-
 function App() {
   return (
     <Router>
