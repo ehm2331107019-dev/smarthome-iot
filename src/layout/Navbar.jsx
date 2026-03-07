@@ -28,7 +28,7 @@ export default function Navbar({toggleDrawer, isMobile}){
                     </IconButton>
                 )}
                 <Typography variant="h6">
-                    IoT Dashboard - Evelin Hernandez and Ixchel de la Cruz
+                    IoT Dashboard - Enrique Mateo Segundo
                 </Typography>
             </Toolbar>
         </AppBar>
