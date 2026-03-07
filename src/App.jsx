@@ -11,13 +11,14 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<WelcomePage />} />
-
-        <Route element={<MainLayout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/devices" element={<DevicesPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="devices" element={<DevicesPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
+
+        {/* Página de bienvenida aparte */}
+        <Route path="/welcome" element={<WelcomePage />} />
 
       </Routes>
     </BrowserRouter>

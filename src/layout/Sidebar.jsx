@@ -24,19 +24,16 @@ export default function Sidebar({open, onClose, isMobile}){
             {}
             <Toolbar />
             <List>
-
-                {/* Dashboard */}
                 <ListItemButton
                     component = {Link}
-                    to = "/dashboard"
-                    selected = {location.pathname === "/dashboard"}
+                    to = "/"
+                    selected = {location.pathname === "/"}
                     onClick={handleClick}
                 >
                     <ListItemIcon><DashboardIcon /></ListItemIcon>
                     <ListItemText primary="Dashboard"></ListItemText>
                 </ListItemButton>
 
-                {/* Devices */}
                 <ListItemButton
                     component = {Link}
                     to = "/devices"
@@ -47,7 +44,6 @@ export default function Sidebar({open, onClose, isMobile}){
                     <ListItemText primary="Devices"></ListItemText>
                 </ListItemButton>
 
-                {/* Settings */}
                 <ListItemButton
                     component = {Link}
                     to = "/settings"
