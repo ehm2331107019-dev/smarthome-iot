@@ -8,18 +8,23 @@ export default function Dashboard() {
     <PageContainer title="Dashboard">
       <Grid container spacing={3}>
 
-        <Grid item xs={12} md={4}>
-          <StatCard title="Temperatura" value="25°C" />
+        <Grid item xs={12} md={3}>
+          <StatCard title="Devices" value="20" />
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <StatCard title="Humedad" value="60%" />
+        <Grid item xs={12} md={3}>
+          <StatCard title="Active" value="15" />
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <StatCard title="Gas" value="Normal" />
+        <Grid item xs={12} md={3}>
+          <StatCard title="Alerts" value="5" />
         </Grid>
 
+        <Grid item xs={12} md={3}>
+          <StatCard title="Users" value="4" />
+        </Grid>
+
+        {/* GRAFICA */}
         <Grid item xs={12}>
           <SensorChart />
         </Grid>
