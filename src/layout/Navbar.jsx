@@ -1,4 +1,4 @@
-import{
+import {
     AppBar,
     Toolbar,
     Typography,
@@ -35,22 +35,37 @@ export default function Navbar({toggleDrawer, isMobile}){
                     variant="h6"
                     component={Link}
                     to="/"
-                    sx={{flexGrow:1, textDecoration:"none", color:"inherit"}}
+                    sx={{
+                        flexGrow: 1,
+                        textDecoration: "none",
+                        color: "inherit"
+                    }}
                 >
                     IoT Dashboard - SmartHome
                 </Typography>
 
-                {/* BOTONES */}
                 <Box>
-                    <Button color="inherit" component={Link} to="/">
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/"
+                    >
                         Inicio
                     </Button>
 
-                    <Button color="inherit">
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/login"
+                    >
                         Login
                     </Button>
 
-                    <Button color="inherit">
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/register"
+                    >
                         Register
                     </Button>
                 </Box>

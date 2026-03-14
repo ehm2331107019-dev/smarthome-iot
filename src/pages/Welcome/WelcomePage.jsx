@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 
 export default function WelcomePage() {
   return (
-    <Box sx={{ textAlign: "center", mt: 4 }}>
+    <Box sx={{ textAlign: "center", mt: 5 }}>
 
       <Typography
         variant="h4"
-        gutterBottom
-        sx={{ color: "primary.main", fontWeight: "bold" }}
+        sx={{
+          color: "primary.main",
+          fontWeight: "bold",
+          mb: 3
+        }}
       >
         Bienvenido al IoT Dashboard
       </Typography>
@@ -17,7 +20,6 @@ export default function WelcomePage() {
         elevation={3}
         sx={{
           p: 4,
-          mt: 3,
           maxWidth: 800,
           mx: "auto",
           borderTop: "4px solid",
@@ -48,6 +50,7 @@ export default function WelcomePage() {
         >
           Iniciar
         </Button>
+
       </Paper>
 
     </Box>

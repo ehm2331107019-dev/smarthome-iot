@@ -5,6 +5,9 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import DevicesPage from "./pages/Devices/DevicesPage";
 import SettingsPage from "./pages/Settings/SettingsPage";
 import WelcomePage from "./pages/Welcome/WelcomePage";
+import LoginPage from "./pages/Login/LoginPage";
+import RegisterPage from "./pages/Register/RegisterPage";
+
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="devices" element={<DevicesPage />} />
           <Route path="settings" element={<SettingsPage />} />
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
 
         </Route>
 
