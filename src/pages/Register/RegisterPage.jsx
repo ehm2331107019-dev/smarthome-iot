@@ -10,19 +10,19 @@ export default function RegisterPage() {
         </Typography>
 
         <TextField
-          label="Nombre"
+          label="name"
           fullWidth
           margin="normal"
         />
 
         <TextField
-          label="Correo"
+          label="email"
           fullWidth
           margin="normal"
         />
 
         <TextField
-          label="Contraseña"
+          label="password"
           type="password"
           fullWidth
           margin="normal"
@@ -33,7 +33,7 @@ export default function RegisterPage() {
           fullWidth
           sx={{ mt: 2 }}
         >
-          Registrarse
+          createAt
         </Button>
 
       </Paper>
