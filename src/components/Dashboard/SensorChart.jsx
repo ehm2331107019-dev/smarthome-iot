@@ -21,7 +21,7 @@ const data = [
 
 export default function SensorChart() {
   return (
-    <Card sx={{ mt: 2 }}>
+    <Card>
       <CardContent>
 
         <Typography variant="h6" gutterBottom>
@@ -30,15 +30,15 @@ export default function SensorChart() {
 
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={data}>
-            
+
             <CartesianGrid strokeDasharray="3 3" />
-            
+
             <XAxis dataKey="time" />
-            
+
             <YAxis />
-            
+
             <Tooltip />
-            
+
             <Legend />
 
             <Line
