@@ -9,7 +9,7 @@ import {
   ResponsiveContainer
 } from "recharts";
 
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 
 const data = [
   { time: "12:00", gas: 10, temp: 18 },
@@ -21,49 +21,44 @@ const data = [
 
 export default function SensorChart() {
   return (
-    <Card
-      sx={{
-        borderRadius: 3,
-        boxShadow: 3
-      }}
-    >
+    <Card>
       <CardContent>
 
-        <Typography variant="h6" sx={{ mb: 2 }}>
+        <Typography variant="h6" gutterBottom>
           Sensor Monitoring
         </Typography>
 
-        <ResponsiveContainer width="100%" height={320}>
-          <LineChart data={data}>
+        <Box sx={{ width: "100%", height: 350 }}>
+          <ResponsiveContainer>
+            <LineChart data={data}>
 
-            <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDasharray="3 3" />
 
-            <XAxis dataKey="time" />
+              <XAxis dataKey="time" />
 
-            <YAxis />
+              <YAxis />
 
-            <Tooltip />
+              <Tooltip />
 
-            <Legend />
+              <Legend />
 
-            <Line
-              type="monotone"
-              dataKey="gas"
-              stroke="#f44336"
-              strokeWidth={2}
-              name="Gas Level"
-            />
+              <Line
+                type="monotone"
+                dataKey="gas"
+                stroke="#ff0000"
+                name="Gas Level"
+              />
 
-            <Line
-              type="monotone"
-              dataKey="temp"
-              stroke="#1976d2"
-              strokeWidth={2}
-              name="Temperature (°C)"
-            />
+              <Line
+                type="monotone"
+                dataKey="temp"
+                stroke="#1976d2"
+                name="Temperature (°C)"
+              />
 
-          </LineChart>
-        </ResponsiveContainer>
+            </LineChart>
+          </ResponsiveContainer>
+        </Box>
 
       </CardContent>
     </Card>
