@@ -8,6 +8,7 @@ import{
 } from "@mui/material"
 
 import MenuIcon from "@mui/icons-material/Menu"
+import { Link } from "react-router-dom"
 
 export default function Navbar({toggleDrawer, isMobile}){
     return(
@@ -30,14 +31,28 @@ export default function Navbar({toggleDrawer, isMobile}){
                     </IconButton>
                 )}
 
-                <Typography variant="h6" sx={{flexGrow: 1}}>
+                <Typography
+                    variant="h6"
+                    component={Link}
+                    to="/"
+                    sx={{flexGrow:1, textDecoration:"none", color:"inherit"}}
+                >
                     IoT Dashboard - SmartHome
                 </Typography>
 
-                {/* BOTONES DERECHA */}
+                {/* BOTONES */}
                 <Box>
-                    <Button color="inherit">Login</Button>
-                    <Button color="inherit">Register</Button>
+                    <Button color="inherit" component={Link} to="/">
+                        Inicio
+                    </Button>
+
+                    <Button color="inherit">
+                        Login
+                    </Button>
+
+                    <Button color="inherit">
+                        Register
+                    </Button>
                 </Box>
 
             </Toolbar>
