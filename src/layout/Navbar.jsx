@@ -2,7 +2,9 @@ import{
     AppBar,
     Toolbar,
     Typography,
-    IconButton
+    IconButton,
+    Button,
+    Box
 } from "@mui/material"
 
 import MenuIcon from "@mui/icons-material/Menu"
@@ -16,20 +18,28 @@ export default function Navbar({toggleDrawer, isMobile}){
             }}
         >
             <Toolbar>
-                {}
+
                 {isMobile && (
                     <IconButton
                         color="inherit"
-                        edge = "start"
+                        edge="start"
                         onClick={toggleDrawer}
                         sx={{mr: 2}}
                     >
                         <MenuIcon />
                     </IconButton>
                 )}
-                <Typography variant="h6">
-                    IoT Dashboard - Enrique Mateo Segundo
+
+                <Typography variant="h6" sx={{flexGrow: 1}}>
+                    IoT Dashboard - SmartHome
                 </Typography>
+
+                {/* BOTONES DERECHA */}
+                <Box>
+                    <Button color="inherit">Login</Button>
+                    <Button color="inherit">Register</Button>
+                </Box>
+
             </Toolbar>
         </AppBar>
     );
