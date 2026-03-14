@@ -24,7 +24,6 @@ export default function Dashboard() {
           <StatCard title="Users" value="4" />
         </Grid>
 
-        {/* GRAFICA */}
         <Grid item xs={12}>
           <SensorChart />
         </Grid>

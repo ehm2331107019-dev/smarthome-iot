@@ -21,14 +21,19 @@ const data = [
 
 export default function SensorChart() {
   return (
-    <Card>
+    <Card
+      sx={{
+        borderRadius: 3,
+        boxShadow: 3
+      }}
+    >
       <CardContent>
 
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" sx={{ mb: 2 }}>
           Sensor Monitoring
         </Typography>
 
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={320}>
           <LineChart data={data}>
 
             <CartesianGrid strokeDasharray="3 3" />
@@ -45,6 +50,7 @@ export default function SensorChart() {
               type="monotone"
               dataKey="gas"
               stroke="#f44336"
+              strokeWidth={2}
               name="Gas Level"
             />
 
@@ -52,6 +58,7 @@ export default function SensorChart() {
               type="monotone"
               dataKey="temp"
               stroke="#1976d2"
+              strokeWidth={2}
               name="Temperature (°C)"
             />
 
