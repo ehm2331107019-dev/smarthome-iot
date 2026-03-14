@@ -5,11 +5,25 @@ export default function WelcomePage() {
   return (
     <Box sx={{ textAlign: "center", mt: 4 }}>
 
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        variant="h4"
+        gutterBottom
+        sx={{ color: "primary.main", fontWeight: "bold" }}
+      >
         Bienvenido al IoT Dashboard
       </Typography>
 
-      <Paper sx={{ p: 3, mt: 2, maxWidth: 800, mx: "auto" }}>
+      <Paper
+        elevation={3}
+        sx={{
+          p: 4,
+          mt: 3,
+          maxWidth: 800,
+          mx: "auto",
+          borderTop: "4px solid",
+          borderColor: "primary.main"
+        }}
+      >
         <Typography paragraph>
           Este sistema SmartHome permite monitorear y controlar dispositivos
           inteligentes conectados mediante tecnología IoT (Internet of Things).
@@ -25,7 +39,6 @@ export default function WelcomePage() {
           configurar los parámetros de tu sistema SmartHome de forma sencilla.
         </Typography>
 
-        {/* BOTÓN INICIAR */}
         <Button
           variant="contained"
           size="large"
@@ -35,7 +48,6 @@ export default function WelcomePage() {
         >
           Iniciar
         </Button>
-
       </Paper>
 
     </Box>
